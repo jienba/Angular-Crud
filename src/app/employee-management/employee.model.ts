@@ -4,5 +4,5 @@ export class EmployeeModel {
   lastName: string = '';
   email: string = '';
   mobile: string = '';
-  salary: string = '';
+  salary: number = 0;
 }

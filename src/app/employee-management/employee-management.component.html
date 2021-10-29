@@ -11,7 +11,7 @@
   <thead>
   <tr>
     <th scope="col">ID Employé(e)</th>
-    <th scope="col">Prenom</th>
+    <th scope="col">Prenom(s)</th>
     <th scope="col">Nom</th>
     <th scope="col">Email</th>
     <th scope="col">Mobile</th>
@@ -26,7 +26,7 @@
     <td>{{row.lastName}}</td>
     <td>{{row.email}}</td>
     <td>{{row.mobile}}</td>
-    <td>{{row.salary}} FCFA</td>
+    <td>{{row.salary | number}} FCFA</td>
     <td>
       <button class="btn btn-info" (click)="onEdit(row)" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Modifier</button>
       <button (click)="deleteEmployee(row)" class="btn btn-danger mx-3">Supprimer</button>
@@ -65,7 +65,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Salaire</label>
-            <input type="text" formControlName="salary" class="form-control" id="exampleInputPassword1">
+            <input type="number" formControlName="salary" class="form-control" id="exampleInputPassword1">
           </div>
 
         </form>
